@@ -12,30 +12,32 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
+      background-color: #f5f7fa;
       color: #333;
     }
 
     header {
       background-color: #0f172a;
       color: white;
-      padding: 30px 20px;
+      padding: 40px 20px;
       text-align: center;
     }
 
     header img {
       height: 60px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     header h1 {
-      margin: 10px 0 5px;
-      font-size: 40px;
+      margin: 0;
+      font-size: 42px;
+      letter-spacing: 1px;
     }
 
     header p {
       font-size: 18px;
-      margin: 0;
+      margin: 10px 0 0;
+      color: #cbd5e1;
     }
 
     section {
@@ -48,26 +50,29 @@
     h2 {
       font-size: 32px;
       margin-bottom: 20px;
+      color: #0f172a;
     }
 
     .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 20px;
+      justify-content: center;
       margin-top: 30px;
     }
 
     .card {
       background-color: white;
       padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      width: 280px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
     }
 
     .card h3 {
@@ -75,50 +80,57 @@
       color: #0f172a;
     }
 
+    .card p {
+      font-size: 15px;
+      color: #555;
+    }
+
     .btn {
       display: inline-block;
-      padding: 12px 24px;
-      margin-top: 20px;
-      background-color: #007BFF;
+      padding: 12px 28px;
+      margin-top: 25px;
+      background-color: #ff6600;
       color: white;
       text-decoration: none;
       border-radius: 6px;
       transition: background-color 0.3s ease;
+      font-weight: 500;
     }
 
     .btn:hover {
-      background-color: #0056b3;
+      background-color: #e65c00;
     }
 
-    form input, form textarea {
-      padding: 10px;
-      width: 80%;
-      max-width: 400px;
+    .form-section input, .form-section textarea {
+      width: 90%;
+      max-width: 500px;
+      padding: 12px;
       margin: 10px 0;
       border-radius: 6px;
       border: 1px solid #ccc;
+      font-size: 16px;
     }
 
-    form button {
-      padding: 12px 24px;
-      background-color: #007BFF;
+    .form-section button {
+      margin-top: 15px;
+      background-color: #0f172a;
       color: white;
+      padding: 12px 26px;
       border: none;
       border-radius: 6px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      font-size: 16px;
     }
 
-    form button:hover {
-      background-color: #0056b3;
+    .form-section button:hover {
+      background-color: #1e293b;
     }
 
     footer {
-      background-color: #222;
+      background-color: #0f172a;
       color: white;
       text-align: center;
       padding: 30px 20px;
-      position: relative;
     }
 
     footer img {
@@ -127,16 +139,11 @@
       margin-top: 15px;
     }
 
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 100;
-    }
-
-    .whatsapp-float img {
-      width: 50px;
-      height: 50px;
+    @media (max-width: 768px) {
+      .card {
+        width: 100%;
+        max-width: 90%;
+      }
     }
   </style>
 </head>
@@ -144,7 +151,7 @@
 
   <header>
     <img src="https://i.imgur.com/tqd84Uw.png" alt="GoReach Digital Marketing Logo" />
-    <h1>Goreachdigitals</h1>
+    <h1>GoReachDigitals</h1>
     <p>Your Growth is Our Goal 🚀</p>
   </header>
 
@@ -153,33 +160,34 @@
     <div class="services">
       <div class="card">
         <h3>SEO Optimization</h3>
-        <p>Rank higher on Google and get more organic traffic with our expert SEO services.</p>
+        <p>Rank higher on Google and attract more organic traffic through strategic SEO techniques.</p>
       </div>
       <div class="card">
         <h3>Social Media Growth</h3>
-        <p>Grow your presence on Instagram, Facebook, and YouTube with tailored strategies.</p>
+        <p>Expand your brand on Instagram, Facebook, and YouTube with our custom content plans.</p>
       </div>
       <div class="card">
         <h3>Website Design</h3>
-        <p>Modern, responsive websites that attract and convert your ideal audience.</p>
+        <p>Get modern, responsive websites designed to convert visitors into paying customers.</p>
       </div>
       <div class="card">
-        <h3>Google Ads Management</h3>
-        <p>Get instant traffic and leads through expertly managed ad campaigns.</p>
+        <h3>Paid Advertising</h3>
+        <p>Maximize ROI with targeted Google & Meta ad campaigns tailored to your goals.</p>
       </div>
       <div class="card">
-        <h3>Branding & Design</h3>
-        <p>Create a strong visual identity that resonates with your customers and audience.</p>
+        <h3>Brand Strategy</h3>
+        <p>Build a brand that stands out with identity design and strong brand messaging.</p>
       </div>
       <div class="card">
-        <h3>Content Marketing</h3>
-        <p>Engage and convert with blogs, reels, and content that builds trust.</p>
+        <h3>Content Creation</h3>
+        <p>Engaging reels, graphics & blogs created to boost engagement and conversion.</p>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>Get In Touch</h2>
+  <section class="form-section">
+    <h2>Let’s Connect</h2>
+    <p>Drop us a message and let’s start growing your brand today.</p>
     <form action="mailto:goreachdigitals@gmail.com" method="POST" enctype="text/plain">
       <input type="text" name="name" placeholder="Your Name" required><br>
       <input type="email" name="email" placeholder="Your Email" required><br>
@@ -190,15 +198,10 @@
 
   <footer>
     <p>&copy; 2025 GoReachDigitals | All rights reserved.</p>
-    <a href="https://wa.me/+919043704053" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    <a href="https://wa.me/919043704053" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp">
     </a>
   </footer>
 
-  <a href="https://wa.me/+91" class="whatsapp-float" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
-  </a>
-
 </body>
 </html>
-
