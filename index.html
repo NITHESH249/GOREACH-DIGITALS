@@ -40,7 +40,7 @@
 
     section {
       padding: 60px 20px;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
       text-align: center;
     }
@@ -51,10 +51,9 @@
     }
 
     .services {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      justify-content: center;
       margin-top: 30px;
     }
 
@@ -63,12 +62,12 @@
       padding: 25px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 280px;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
     .card h3 {
@@ -91,17 +90,53 @@
       background-color: #0056b3;
     }
 
+    form input, form textarea {
+      padding: 10px;
+      width: 80%;
+      max-width: 400px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      padding: 12px 24px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #0056b3;
+    }
+
     footer {
       background-color: #222;
       color: white;
       text-align: center;
       padding: 30px 20px;
+      position: relative;
     }
 
     footer img {
       width: 40px;
       height: 40px;
       margin-top: 15px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+
+    .whatsapp-float img {
+      width: 50px;
+      height: 50px;
     }
   </style>
 </head>
@@ -113,16 +148,6 @@
     <p>Your Growth is Our Goal 🚀</p>
   </header>
 
-<section>
-  <h2>Contact Us</h2>
-  <form action="mailto:goreachdigitals@gmail.com" method="POST" enctype="text/plain">
-    <input type="text" name="name" placeholder="Your Name" required style="padding: 10px; width: 80%; max-width: 400px; margin: 10px 0; border-radius: 6px; border: 1px solid #ccc;"><br>
-    <input type="email" name="email" placeholder="Your Email" required style="padding: 10px; width: 80%; max-width: 400px; margin: 10px 0; border-radius: 6px; border: 1px solid #ccc;"><br>
-    <textarea name="message" placeholder="Your Message" rows="5" required style="padding: 10px; width: 80%; max-width: 400px; margin: 10px 0; border-radius: 6px; border: 1px solid #ccc;"></textarea><br>
-    <button type="submit" style="padding: 12px 24px; background-color: #007BFF; color: white; border: none; border-radius: 6px; cursor: pointer;">Send Message</button>
-  </form>
-</section>
-
   <section>
     <h2>Our Services</h2>
     <div class="services">
@@ -132,27 +157,47 @@
       </div>
       <div class="card">
         <h3>Social Media Growth</h3>
-        <p>Explode your presence on Instagram, Facebook, and YouTube with our proven strategies.</p>
+        <p>Grow your presence on Instagram, Facebook, and YouTube with tailored strategies.</p>
       </div>
       <div class="card">
         <h3>Website Design</h3>
         <p>Modern, responsive websites that attract and convert your ideal audience.</p>
       </div>
+      <div class="card">
+        <h3>Google Ads Management</h3>
+        <p>Get instant traffic and leads through expertly managed ad campaigns.</p>
+      </div>
+      <div class="card">
+        <h3>Branding & Design</h3>
+        <p>Create a strong visual identity that resonates with your customers and audience.</p>
+      </div>
+      <div class="card">
+        <h3>Content Marketing</h3>
+        <p>Engage and convert with blogs, reels, and content that builds trust.</p>
+      </div>
     </div>
   </section>
 
   <section>
-    <h2>Contact Us</h2>
-    <p>Want to grow your business with us? Let's talk!</p>
-    <a href="mailto:goreachdigitals@gmail.com" class="btn">Get in Touch</a>
+    <h2>Get In Touch</h2>
+    <form action="mailto:goreachdigitals@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea><br>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
     <p>&copy; 2025 GoReachDigitals | All rights reserved.</p>
     <a href="https://wa.me/+919043704053" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
   </footer>
+
+  <a href="https://wa.me/+919043704053" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+  </a>
 
 </body>
 </html>
